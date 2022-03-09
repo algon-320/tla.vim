@@ -22,10 +22,14 @@ let s:tla_closed_scopes = []
 "  \ {'region': 'tlaSetRegion', 'start': 'tlaStartSet', 'end': 'tlaEndSet'},
 "  \ {'region': 'tlaFunctionRegion', 'start': 'tlaStartFunction', 'end': 'tlaEndFunction'},
 let s:pluscal_scopes = [ 
-  \ {'region': 'pluscalBeginRegion', 'start': 'pluscalStartBegin', 'end': 'pluscalEndBegin'},
-  \ {'region': 'pluscalIfRegion', 'start': 'pluscalStartIf', 'end': 'pluscalEndIf', 'mid': 'pluscalElse'},
-  \ {'region': 'pluscalEitherRegion', 'start': 'pluscalStartEither', 'end': 'pluscalEndEither', 'mid': 'pluscalOr'},
-  \ {'region': 'pluscalDoRegion', 'start': 'pluscalStartDo', 'end': 'pluscalEndDo'},
+  \ {'region': 'pluscalRegionDefine', 'start': 'pluscalStartDefine', 'end': 'pluscalEndDefine'},
+  \ {'region': 'pluscalRegionMacro', 'start': 'pluscalStartMacro', 'end': 'pluscalEndMacro'},
+  \ {'region': 'pluscalRegionProcedure', 'start': 'pluscalStartProcedure', 'end': 'pluscalEndProcedure'},
+  \ {'region': 'pluscalRegionProcess', 'start': 'pluscalStartProcess', 'end': 'pluscalEndProcess'},
+  \ {'region': 'pluscalRegionBegin', 'start': 'pluscalStartBegin', 'end': 'pluscalEndBegin'},
+  \ {'region': 'pluscalRegionIf', 'start': 'pluscalStartIf', 'end': 'pluscalEndIf', 'mid': 'pluscalElse'},
+  \ {'region': 'pluscalRegionEither', 'start': 'pluscalStartEither', 'end': 'pluscalEndEither', 'mid': 'pluscalOr'},
+  \ {'region': 'pluscalRegionDo', 'start': 'pluscalStartDo', 'end': 'pluscalEndDo'},
   \ ]
 
 function! s:SyntaxStackAt(line, column)
